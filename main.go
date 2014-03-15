@@ -5,7 +5,9 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/shxsun/gails/controllers"
-	"github.com/shxsun/gails/models"
+	"github.com/shxsun/gails/models" /* XXXX
+	{{.PkgPath}}/models
+	XXXX */
 )
 
 func main() {
