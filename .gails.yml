@@ -1,0 +1,3 @@
+---
+controllers/user.go: controllers/{{.Table}}.go
+models/user.go: models/{{.Table}}.go
