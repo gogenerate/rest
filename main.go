@@ -4,10 +4,8 @@ import (
 	"log"
 
 	"github.com/astaxie/beego"
-	"github.com/shxsun/gails/controllers" // XXXX
-	//NNNN "{{.PkgPath}}/controllers"
-	"github.com/shxsun/gails/models" // XXXX
-	//NNNN "{{.PkgPath}}/models"
+	"github.com/shxsun/gails/controllers" // NNNN "{{.PkgPath}}/controllers"
+	"github.com/shxsun/gails/models"      // NNNN "{{.PkgPath}}/models"
 )
 
 func main() {

@@ -21,8 +21,7 @@ type User struct {
 }
 
 // create
-func (v *User) Create() error { //XXXX
-	//NNNN func (v *{{.Table}}) Create() error {
+func (v *User) Create() error {
 	_, err := x.Insert(v)
 	return err
 }
@@ -30,7 +29,7 @@ func (v *User) Create() error { //XXXX
 func (v *User) Update(id int64) error {
 	affec, err := x.Id(id).Update(v)
 	if err == nil && affec == 0 {
-		err = fmt.Errorf("update user(id:%d) failed", id)
+		err = fmt.Errorf("update {{.Table}}(id:%d) failed", id)
 	}
 	return err
 }
@@ -39,7 +38,7 @@ func GetUser(id int64) (v *User, err error) {
 	v = new(User)
 	ok, err := x.Id(id).Get(v)
 	if err == nil && !ok {
-		err = fmt.Errorf("get user(id:%d) failed", id)
+		err = fmt.Errorf("get {{.Table}}(id:%d) failed", id)
 	}
 	return
 }
@@ -59,7 +58,7 @@ func AllUser() (vs []User, err error) {
 func DelUser(id int64) error {
 	affec, err := x.Id(id).Delete(new(User))
 	if err == nil && affec == 0 {
-		err = fmt.Errorf("user(id:%d) already deleted", id)
+		err = fmt.Errorf("{{.Table}}(id:%d) already deleted", id)
 	}
 	return err
 }
