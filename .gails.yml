@@ -1,6 +1,6 @@
----
 file-rename:
-    controllers/user.go: controllers/{{.Table}}.go
-    models/user.go: models/{{.Table}}.go
+  f1: f2
+  n2: n3
 string-rename:
-    User: {{.Table}}
+  hello: kk
+  hi: baby
