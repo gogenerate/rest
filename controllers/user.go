@@ -10,7 +10,12 @@ type UserController struct {
 func (this *UserController) Save() {
 	v := new(models.User)
 	v.ID, _ = this.GetInt("id")
-	v.Name = this.MustString("name")
+	v.Name = this.MustString("name") // XXXX
+	/* XXXX
+		{{range .Cols}}
+		v.{{.Name}} = this.Get{{.Type|title}}("{{.ORMName}}")
+		{{end}}
+	XXXX */
 	this.err = v.Save()
 }
 
