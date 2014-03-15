@@ -16,6 +16,7 @@ func (this *UserController) Save() {
 		v.{{.Name}} = this.Get{{.Type|title}}("{{.ORMName}}")
 		{{end}}
 	XXXX */
+	//NNNN{{.Cols}}
 	this.err = v.Save()
 }
 
