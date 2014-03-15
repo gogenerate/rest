@@ -3,5 +3,3 @@ file-rename:
   models/user.go: models/{{.Table}}.go
 string-rename:
   User: {{.Table}}
-  hello: kk
-  hi: baby
