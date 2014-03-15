@@ -1,6 +1,6 @@
 package controllers
 
-import "github.com/shxsun/gails/models"
+import "github.com/shxsun/gails/models" // NNNN import "{{.PkgPath}}/models"
 
 type UserController struct {
 	APIController
