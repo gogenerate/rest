@@ -1,3 +1,6 @@
 ---
-controllers/user.go: controllers/{{.Table}}.go
-models/user.go: models/{{.Table}}.go
+file-rename:
+    controllers/user.go: controllers/{{.Table}}.go
+    models/user.go: models/{{.Table}}.go
+string-rename:
+    User: {{.Table}}
