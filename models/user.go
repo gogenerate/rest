@@ -12,11 +12,17 @@ func init() {
 
 type User struct {
 	ID   int64  `json:"id" xorm:"id pk autoincr"`
-	Name string `json:"name"`
+	Name string `json:"name"` // XXXX
+	/*XXXX
+	{{range .Cols}}
+	{{.Name}} {{.Type}} `json:"{{.ORMName}}"`
+	{{end}}
+	XXXX*/
 }
 
 // create
-func (v *User) Create() error {
+func (v *User) Create() error { //XXXX
+	//NNNN func (v *{{.Table}}) Create() error {
 	_, err := x.Insert(v)
 	return err
 }
