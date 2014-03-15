@@ -4,8 +4,7 @@ import (
 	"log"
 
 	"github.com/astaxie/beego"
-	"github.com/shxsun/gails/controllers" // NNNN "{{.PkgPath}}/controllers"
-	"github.com/shxsun/gails/models"      // NNNN "{{.PkgPath}}/models"
+	"github.com/shxsun/gails-default/models" // NNNN "{{.PkgPath}}/models"
 )
 
 func main() {
@@ -15,9 +14,5 @@ func main() {
 	if err := models.InitDB(); err != nil {
 		log.Fatal(err)
 	}
-	beego.Router("/api/user/new", &controllers.UserController{}, "post:Save")
-	beego.Router("/api/user/all", &controllers.UserController{}, "get:All")
-	beego.Router("/api/user/:id(\\d+)", &controllers.UserController{}) // GET + PUT  + DELETE
-
 	beego.Run()
 }
