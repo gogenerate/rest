@@ -1,3 +1,7 @@
+notice: |
+    This template is created by skyblue. in 2014/03/15
+    You need to change setting in conf/app.conf, 
+    And create a mysql database before you use -bee run- to start it.
 file-rename:
   controllers/user.go: controllers/{{.Table}}.go
   models/user.go: models/{{.Table}}.go
