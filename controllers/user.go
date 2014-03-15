@@ -12,8 +12,7 @@ func (this *UserController) Save() {
 	v.ID, _ = this.GetInt("id")
 	v.Name = this.MustString("name") // XXXX
 	/* XXXX
-		{{range .Cols}}
-		v.{{.Name}} = this.Get{{.Type|title}}("{{.ORMName}}")
+		{{range .Cols}} v.{{.Name}} = this.Get{{.Type|title}}("{{.ORMName}}")
 		{{end}}
 	XXXX */
 	this.err = v.Save()
@@ -23,7 +22,9 @@ func (this *UserController) Save() {
 func (this *UserController) Post() {
 	v := new(models.User)
 	v.ID, _ = this.GetInt(":id")
-	v.Name = this.MustString("name")
+	v.Name = this.MustString("name") // XXXX
+	//NNNN {{range .Cols}} v.{{.Name}} = this.Must{{.Type|title}}("{{.ORMName}}")
+	//NNNN {{end}}
 	this.err = v.Save()
 }
 

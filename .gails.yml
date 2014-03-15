@@ -3,7 +3,7 @@ notice: |
     You need to change setting in conf/app.conf, 
     And create a mysql database before you use -bee run- to start it.
 file-rename:
-  user_router.go: "{{.Table}}.go"
+  user_router.go: "{{.Table}}_router.go"
   controllers/user.go: controllers/{{.Table}}.go
   models/user.go: models/{{.Table}}.go
 string-rename:
