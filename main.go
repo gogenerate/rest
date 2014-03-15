@@ -7,7 +7,9 @@ import (
 	"github.com/shxsun/gails/controllers"
 	"github.com/shxsun/gails/models" /* XXXX
 	{{.PkgPath}}/models
+	{{.}}
 	XXXX */
+	// XXXX
 )
 
 func main() {
