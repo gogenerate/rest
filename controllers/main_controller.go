@@ -7,6 +7,7 @@ type MainController struct {
 }
 
 func (this *MainController) Get() {
-	//	this.Data["author"] = "skyblue"
+	this.Data["Author"] = "skyblue"
 	this.TplNames = "index.tpl"
+	this.Render()
 }
