@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/shxsun/gails-default/controllers" // NNNN "{{.PkgPath}}/controllers"
+	"github.com/gogenerate/rest/controllers" // NNNN "{{.PkgPath}}/controllers"
 )
 
 func init() {
